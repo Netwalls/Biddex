@@ -28,6 +28,10 @@ export const Navbar: React.FC = () => {
                     <Link href="/infrastructure" className="hover:text-[#00FF00] transition-colors">Infrastructure</Link>
                     <Link href="/protocol" className="hover:text-[#00FF00] transition-colors">Protocol</Link>
                     <Link href="/intelligence" className="hover:text-[#00FF00] transition-colors">Intelligence</Link>
+                    <Link href="/dashboard" className="text-white/60 hover:text-[#00FF00] transition-colors flex items-center gap-1.5">
+                        <span className="w-1 h-1 rounded-full bg-[#00FF00]" />
+                        Dashboard
+                    </Link>
                 </div>
 
                 <WalletConnect />

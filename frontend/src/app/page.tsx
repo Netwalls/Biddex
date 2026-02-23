@@ -3,6 +3,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { ArrowRight, BarChart3, Database, Zap, ShieldCheck, Globe, Cpu, Network } from "lucide-react";
 
 export default function Home() {
@@ -69,9 +70,9 @@ export default function Home() {
               transition={{ duration: 1, delay: 0.6 }}
               className="flex flex-wrap items-center justify-center gap-6"
             >
-              <button className="px-10 py-5 bg-[#00FF00] text-black font-bold uppercase tracking-widest text-[11px] rounded-full hover:scale-105 transition-all shadow-[0_0_40px_rgba(0,255,0,0.2)] flex items-center gap-3 active:scale-95 group">
+              <Link href="/dashboard" className="px-10 py-5 bg-[#00FF00] text-black font-bold uppercase tracking-widest text-[11px] rounded-full hover:scale-105 transition-all shadow-[0_0_40px_rgba(0,255,0,0.2)] flex items-center gap-3 active:scale-95 group">
                 Enter Protocol <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </Link>
               <button className="px-10 py-5 bg-white/5 border border-white/10 font-bold uppercase tracking-widest text-[11px] rounded-full hover:bg-white/10 transition-all active:scale-95">
                 View Whitepaper
               </button>
@@ -148,6 +149,98 @@ export default function Home() {
             </div>
           </div>
         </motion.section>
+
+        {/* Competitor Benchmarking */}
+        <section className="py-32 border-t border-white/5 overflow-hidden">
+          <div className="max-w-7xl mx-auto px-6">
+            <motion.div {...fadeInUp} className="text-center mb-20">
+              <h2 className="text-3xl font-bold uppercase tracking-tighter mb-4">Signal Integrity Benchmark</h2>
+              <p className="text-white/40 max-w-xl mx-auto">Comparing the Biddex batch-auction architecture against legacy continuous matching markets.</p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <motion.div
+                {...fadeInUp}
+                className="p-8 rounded-[32px] bg-white/5 border border-white/10 flex flex-col gap-6 opacity-40 hover:opacity-60 transition-opacity"
+              >
+                <div className="flex justify-between items-start">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-white/40">Legacy Protocol</span>
+                  <div className="w-2 h-2 rounded-full bg-white/20" />
+                </div>
+                <h4 className="text-2xl font-black uppercase italic">POLYMARKET</h4>
+                <div className="space-y-3">
+                  <div className="flex justify-between text-[11px] font-bold uppercase tracking-wider">
+                    <span className="text-white/30">Matching</span>
+                    <span className="text-white/60">Continuous CLOB</span>
+                  </div>
+                  <div className="flex justify-between text-[11px] font-bold uppercase tracking-wider">
+                    <span className="text-white/30">Privacy</span>
+                    <span className="text-white/60">Public Ledger</span>
+                  </div>
+                  <div className="flex justify-between text-[11px] font-bold uppercase tracking-wider">
+                    <span className="text-white/30">MEV Risk</span>
+                    <span className="text-white/60">High</span>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                {...fadeInUp}
+                transition={{ delay: 0.1 }}
+                className="p-8 rounded-[32px] bg-[#00FF00]/5 border-2 border-[#00FF00]/30 flex flex-col gap-6 relative"
+              >
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-[#00FF00] rounded-full text-[9px] font-bold text-black uppercase tracking-widest shadow-[0_0_20px_rgba(0,255,0,0.4)]">
+                  Infrastructure Grade
+                </div>
+                <div className="flex justify-between items-start pt-2">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-[#00FF00]">Biddex Protocol</span>
+                  <div className="w-2 h-2 rounded-full bg-[#00FF00] animate-pulse" />
+                </div>
+                <h4 className="text-4xl font-black uppercase tracking-tighter text-[#00FF00]">BIDDEX</h4>
+                <div className="space-y-4">
+                  <div className="flex justify-between text-[11px] font-bold uppercase tracking-wider">
+                    <span className="text-white/30">Matching</span>
+                    <span className="text-[#00FF00]">Batch Auction</span>
+                  </div>
+                  <div className="flex justify-between text-[11px] font-bold uppercase tracking-wider">
+                    <span className="text-white/30">Signal</span>
+                    <span className="text-[#00FF00]">Low-Noise</span>
+                  </div>
+                  <div className="flex justify-between text-[11px] font-bold uppercase tracking-wider">
+                    <span className="text-white/30">MEV Risk</span>
+                    <span className="text-[#00FF00]">Zero (Periodic)</span>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                {...fadeInUp}
+                transition={{ delay: 0.2 }}
+                className="p-8 rounded-[32px] bg-white/5 border border-white/10 flex flex-col gap-6 opacity-40 hover:opacity-60 transition-opacity"
+              >
+                <div className="flex justify-between items-start">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-white/40">Legacy Protocol</span>
+                  <div className="w-2 h-2 rounded-full bg-white/20" />
+                </div>
+                <h4 className="text-2xl font-black uppercase italic tracking-tighter">KALSHI</h4>
+                <div className="space-y-3">
+                  <div className="flex justify-between text-[11px] font-bold uppercase tracking-wider">
+                    <span className="text-white/30">Compliance</span>
+                    <span className="text-white/60">Regulated Centralized</span>
+                  </div>
+                  <div className="flex justify-between text-[11px] font-bold uppercase tracking-wider">
+                    <span className="text-white/30">Signal</span>
+                    <span className="text-white/60">Fragmented</span>
+                  </div>
+                  <div className="flex justify-between text-[11px] font-bold uppercase tracking-wider">
+                    <span className="text-white/30">Liquidity</span>
+                    <span className="text-white/60">Siloed</span>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
 
         {/* Core Pillars */}
         <section className="py-32 border-t border-white/5">
