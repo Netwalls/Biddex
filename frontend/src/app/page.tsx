@@ -80,71 +80,28 @@ export default function Home() {
           </div>
         </section>
 
-        {/* The Station - Interactive Mockup */}
+        {/* The Station - Interactive Mockup Replacement */}
         <motion.section
           {...fadeInUp}
           className="pb-32 px-6"
         >
-          <div className="max-w-6xl mx-auto p-4 rounded-[40px] bg-white/5 border border-white/10 backdrop-blur-3xl shadow-2xl overflow-hidden group hover:border-[#00FF00]/20 transition-colors duration-700">
-            <div className="rounded-[30px] overflow-hidden bg-[#0a0a0a] border border-white/5 aspect-video flex flex-col relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#00FF00]/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+          <div className="max-w-6xl mx-auto p-4 rounded-[48px] bg-white/5 border border-white/10 backdrop-blur-3xl shadow-2xl overflow-hidden group hover:border-[#00FF00]/20 transition-colors duration-700">
+            <div className="relative rounded-[32px] overflow-hidden border border-white/5">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#00FF00]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+              <img
+                src="file:///Users/iamtechhunter/.gemini/antigravity/brain/cb9db982-160a-4c68-9044-a13b69dd6826/biddex_trade_dashboard_1771818125727.png"
+                alt="Biddex Station Interface"
+                className="w-full opacity-90 group-hover:opacity-100 transition-all duration-700 pointer-events-none"
+              />
 
-              <div className="h-12 border-b border-white/5 flex items-center px-6 gap-4 relative z-10">
+              {/* Interface Overlay Labels */}
+              <div className="absolute top-6 left-8 flex items-center gap-4">
                 <div className="flex gap-1.5">
-                  <div className="w-2.5 h-2.5 rounded-full bg-white/10" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-white/10" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-white/10" />
+                  <div className="w-2 h-2 rounded-full bg-[#00FF00] animate-pulse" />
+                  <div className="w-2 h-2 rounded-full bg-white/10" />
+                  <div className="w-2 h-2 rounded-full bg-white/10" />
                 </div>
-                <div className="h-5 w-px bg-white/10" />
-                <span className="text-[10px] font-bold tracking-widest text-white/20 uppercase">Biddex Station // Probabilistic Interface</span>
-              </div>
-
-              <div className="flex-1 grid grid-cols-12 relative z-10">
-                <div className="col-span-3 bg-[#0a0a0a] p-6 border-r border-white/5">
-                  <div className="space-y-6">
-                    <div className="h-2 w-12 bg-white/10 rounded" />
-                    {[1, 2, 3, 4].map(i => (
-                      <motion.div
-                        key={i}
-                        initial={{ opacity: 0.1 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ delay: i * 0.1 }}
-                        className="h-8 w-full bg-white/5 rounded-xl border border-white/5"
-                      />
-                    ))}
-                  </div>
-                </div>
-                <div className="col-span-6 bg-[#0a0a0a] p-8 flex flex-col justify-center gap-10">
-                  <div className="flex items-end gap-1.5 h-48">
-                    {[30, 45, 60, 40, 70, 85, 65, 90, 70, 80, 60, 95].map((h, i) => (
-                      <motion.div
-                        key={i}
-                        initial={{ height: 0 }}
-                        whileInView={{ height: `${h}%` }}
-                        transition={{ duration: 1, delay: i * 0.05 }}
-                        className="flex-1 bg-gradient-to-t from-[#00FF00]/10 to-[#00FF00]/40 rounded-t-sm"
-                      />
-                    ))}
-                  </div>
-                  <div className="flex justify-between items-center text-[10px] font-bold tracking-widest text-white/20 uppercase">
-                    <span>Realtime Signal Processing</span>
-                    <span className="text-[#00FF00]/80">Confidence: 96.4%</span>
-                  </div>
-                </div>
-                <div className="col-span-3 bg-[#0a0a0a] p-6 space-y-6">
-                  <div className="h-2 w-20 bg-white/10 rounded" />
-                  <div className="space-y-4">
-                    {[1, 2, 3, 4].map(i => (
-                      <div key={i} className="flex justify-between items-center py-2 border-b border-white/5">
-                        <div className="w-16 h-1.5 bg-white/5 rounded" />
-                        <div className="w-6 h-1.5 bg-[#00FF00]/20 rounded" />
-                      </div>
-                    ))}
-                  </div>
-                  <div className="pt-4">
-                    <div className="h-10 w-full bg-[#00FF00]/10 border border-[#00FF00]/20 rounded-xl" />
-                  </div>
-                </div>
+                <span className="text-[9px] font-black uppercase tracking-[0.4em] text-white/40">Station Live // Node 0xStellar</span>
               </div>
             </div>
           </div>
